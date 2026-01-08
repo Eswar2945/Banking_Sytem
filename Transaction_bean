@@ -1,0 +1,22 @@
+package com.tcs.Bankingsystem.bean;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
+
+@Entity
+@Table(name = "transaction")
+public class Transaction {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @NotBlank(message = "Transaction type is required")
+    private String type;
+
+    @Positive(message = "Amount must be greater than zero")
+    private Double amount;
+
+    // getters and setters
+}
