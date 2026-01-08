@@ -1,0 +1,13 @@
+package com.tcs.Bankingsystem.service;
+
+import java.util.List;
+import com.tcs.Bankingsystem.bean.Transaction;
+
+public interface TransactionService {
+
+    Transaction save(Transaction transaction);
+
+    Transaction getById(Long id);
+
+    List<Transaction> getAll();
+}
